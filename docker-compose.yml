@@ -1,0 +1,20 @@
+services:
+  go:
+    build:
+      dockerfile: ./Dockerfile
+    ports:
+      - 8080:8080
+    volumes:
+      - .:/usr/src/app
+    stdin_open: true
+    tty: true
+
+  # ui:
+  #   build:
+  #     dockerfile: ./UI/Dockerfile
+  #   ports:
+  #     - 5173:5173
+  #   volumes:
+  #     - ./UI:/usr/src/app
+  #   stdin_open: true
+  #   tty: true
